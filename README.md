@@ -5,7 +5,7 @@
 When you want to add a new reference, before to generate pdf file you have to run `biber`, a LaTeX tool for manage your references:
 
 ```shell
-    ~$ biber tfg_main.bcf
+~$ biber tfg_main.bcf
 ```
 
 After this, you can run `pdflatex`
