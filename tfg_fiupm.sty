@@ -1,0 +1,107 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tfg_fiupm}[2010/01/31 (Ángel Herranz) ETSIINF UPM "Trabajo fin de grado" package]
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+
+\RequirePackage[english,spanish]{babel}
+
+% Paquetes "molones"
+\RequirePackage{graphicx}
+\RequirePackage{hyperref}
+\RequirePackage{fancyhdr}
+\RequirePackage{lipsum}
+\RequirePackage{mmap}
+\RequirePackage{relsize}
+\RequirePackage{fontawesome}
+\RequirePackage{rotating}
+\RequirePackage{csquotes}
+
+% Tipo de letra
+\RequirePackage{times}
+\RequirePackage[scaled=0.75]{beramono}
+
+% Formateo e inclusión de código: minted y listings 
+\RequirePackage{listings}
+\lstset{
+  basicstyle=\ttfamily,
+  showstringspaces=false,
+  extendedchars=true,
+  literate=
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {ñ}{~n}1
+  {€}{{\EUR}}1 {£}{{\pounds}}1
+  {¿}{{?`}}1 {¡}{{!`}}1 {‘}{`}1 {’}{'}1
+}
+
+% Márgenes recomendados
+\RequirePackage[left=3cm, right=3cm, top=3.5cm, bottom=3.5cm]{geometry}
+
+% Tipos de letra en títulos y secciones
+\newcommand{\dedicafont}{\usefont{T1}{phv}{m}{n}\fontsize{14}{17.5}\selectfont}
+\newcommand*{\copyrightfont}{\usefont{T1}{phv}{m}{n}\fontsize{6}{7.5}\selectfont}
+\newcommand{\sectionalfont}{\usefont{T1}{phv}{b}{n}}
+% {64}{80} {56}{70} {48}{60} {32}{40} {24}{30} {18}{22.5} {16}{20} {14}{17.5} {12}{15}
+\newcommand{\partnumberfont}{\sectionalfont\fontsize{64}{80}\selectfont}
+\newcommand{\parttitlefont}{\sectionalfont\fontsize{48}{60}\selectfont}
+\newcommand{\chapternumberfont}{\sectionalfont\fontsize{64}{80}\selectfont}
+\newcommand{\chaptertitlefont}{\sectionalfont\fontsize{32}{40}\selectfont}
+\newcommand{\sectiontitlefont}{\sectionalfont\fontsize{18}{22.5}\selectfont}
+\newcommand{\subsectiontitlefont}{\sectionalfont\fontsize{16}{20}\selectfont}
+\newcommand{\subsubsectiontitlefont}{\sectionalfont\fontsize{14}{17.5}\selectfont}
+\newcommand{\headertitlefont}{\sectionalfont\fontsize{12}{15}\selectfont}
+
+\RequirePackage{titlesec}
+\titleformat{\chapter} % command
+[display] % shape
+{} % format
+{\chapternumberfont\flushright\thechapter} % label
+{0pt} % sep
+{\chaptertitlefont\flushright} % before
+[] % after
+
+\titleformat{\section} % command
+[block] % shape
+{} % format
+{\sectiontitlefont\thesection} % label
+{1.5ex} % sep
+{\sectiontitlefont} % before
+[] % after
+
+
+\titleformat{\subsection} % command
+[block] % shape
+{} % format
+{\subsectiontitlefont\thesubsection} % label
+{1.5ex} % sep
+{\subsectiontitlefont} % before
+[] % after
+
+
+\titleformat{\subsubsection} % command
+[block] % shape
+{} % format
+{\subsubsectiontitlefont\thesubsubsection} % label
+{1.5ex} % sep
+{\subsubsectiontitlefont} % before
+[] % after
+
+% Bibliografía en formato IEEE
+\RequirePackage[style=ieee, backend=biber]{biblatex}
+
+% Portada
+\RequirePackage{portada}
+
+%% Separamos los párrafos un poquito más
+\setlength{\parskip}{1.5ex}
+
+\endinput

@@ -6,21 +6,34 @@ Lo que sigue es un lorem ipsum como ejemplo de lo que sería un capítulo. Inclu
 
 \lipsum
 
+\section{Ejemplo de inclusión de código fuente}
 
-A continuación se muestra un listado de código hecho con el paquete \emph{minted:}
+A continuación se muestra el mismo listado de código usando los listings y minted:
 
 
-\begin{code} % Necesario comenzar con esto para poder añadir pie en el listado
+\subsection{Código con listings}
+
+\begin{lstlisting}[language=c]
+#include <stdio.h>
+// A simple Hello World
+int main(){
+  printf("Hello World!\n");
+  return 0;
+}
+\end{lstlisting}
+
+\subsection{Código con minted}
+
 \begin{minted}{c}
-  #include <stdio.h>
-  // A simple Hello World
-  int main(){
-    printf("Hello World!\n");
-    return 0;
-  }
+#include <stdio.h>
+// A simple Hello World
+int main(){
+  printf("Hello World!\n");
+  return 0;
+}
 \end{minted}
-\caption{Ejemplo de listado de código}
-\end{code}
+
+\section{Ejemplo de cita bibliográfica}
 
 Esta es la cita bibliográfica de un libro \cite{ec}.
 

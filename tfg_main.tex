@@ -1,13 +1,12 @@
 \documentclass[twoside,12pt]{book}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[english,spanish]{babel}
-\usepackage[left=3cm, right=3cm, top=3.5cm, bottom=3.5cm]{geometry} % Márgenes recomendados
-\usepackage{times}
-\usepackage[scaled=0.75]{beramono}
-\usepackage{portada}
-\usepackage[style=ieee, backend=biber]{biblatex} % Bibliografía en formato IEEE
-\setlength{\parskip}{1.5ex} %% Separamos los párrafos un poquito más
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Estilo TFG de ETSIINF
+\usepackage{tfg_fiupm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Otros paquetes que quieras usar
+\usepackage{minted}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Datos del director y del autor
@@ -19,73 +18,6 @@
 \date{Enero de 2017}
 \title{Título del trabajo}
 \addbibresource{biblio.bib} %% ficheros con la bibliografía
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Algunos paquetes interesantes de los que depende la plantilla.
-\usepackage{hyperref}
-\usepackage{fancyhdr}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Otros paquetes
-\usepackage{lipsum}
-\usepackage[newfloat]{minted}
-\usepackage{caption}
-\newenvironment{code}{\captionsetup{type=listing}}{}
-\SetupFloatingEnvironment{listing}{name=Listado}
-\usepackage{graphicx}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Tipos de letra en cabeceras de secciones
-
-\newcommand{\dedicafont}{\usefont{T1}{phv}{m}{n}\fontsize{14}{17.5}\selectfont}
-\newcommand*{\copyrightfont}{\usefont{T1}{phv}{m}{n}\fontsize{6}{7.5}\selectfont}
-\newcommand{\sectionalfont}{\usefont{T1}{phv}{b}{n}}
-% {64}{80} {56}{70} {48}{60} {32}{40} {24}{30} {18}{22.5} {16}{20} {14}{17.5} {12}{15}
-\newcommand{\partnumberfont}{\sectionalfont\fontsize{64}{80}\selectfont}
-\newcommand{\parttitlefont}{\sectionalfont\fontsize{48}{60}\selectfont}
-\newcommand{\chapternumberfont}{\sectionalfont\fontsize{64}{80}\selectfont}
-\newcommand{\chaptertitlefont}{\sectionalfont\fontsize{32}{40}\selectfont}
-\newcommand{\sectiontitlefont}{\sectionalfont\fontsize{18}{22.5}\selectfont}
-\newcommand{\subsectiontitlefont}{\sectionalfont\fontsize{16}{20}\selectfont}
-\newcommand{\subsubsectiontitlefont}{\sectionalfont\fontsize{14}{17.5}\selectfont}
-\newcommand{\headertitlefont}{\sectionalfont\fontsize{12}{15}\selectfont}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Formateo de capítulos y secciones
-\usepackage{titlesec}
-\titleformat{\chapter} % command
-[display] % shape
-{} % format
-{\chapternumberfont\flushright\thechapter} % label
-{0pt} % sep
-{\chaptertitlefont\flushright} % before
-[] % after
-
-\titleformat{\section} % command
-[block] % shape
-{} % format
-{\sectiontitlefont\thesection} % label
-{1.5ex} % sep
-{\sectiontitlefont} % before
-[] % after
-
-
-\titleformat{\subsection} % command
-[block] % shape
-{} % format
-{\subsectiontitlefont\thesubsection} % label
-{1.5ex} % sep
-{\subsectiontitlefont} % before
-[] % after
-
-
-\titleformat{\subsubsection} % command
-[block] % shape
-{} % format
-{\subsubsectiontitlefont\thesubsubsection} % label
-{1.5ex} % sep
-{\subsubsectiontitlefont} % before
-[] % after
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Empieza el documento
