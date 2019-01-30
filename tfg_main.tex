@@ -28,8 +28,64 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Otros paquetes
 \usepackage{lipsum}
-\usepackage{listings}
+\usepackage[newfloat]{minted}
+\usepackage{caption}
+\newenvironment{code}{\captionsetup{type=listing}}{}
+\SetupFloatingEnvironment{listing}{name=Listado}
 \usepackage{graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Tipos de letra en cabeceras de secciones
+
+\newcommand{\dedicafont}{\usefont{T1}{phv}{m}{n}\fontsize{14}{17.5}\selectfont}
+\newcommand*{\copyrightfont}{\usefont{T1}{phv}{m}{n}\fontsize{6}{7.5}\selectfont}
+\newcommand{\sectionalfont}{\usefont{T1}{phv}{b}{n}}
+% {64}{80} {56}{70} {48}{60} {32}{40} {24}{30} {18}{22.5} {16}{20} {14}{17.5} {12}{15}
+\newcommand{\partnumberfont}{\sectionalfont\fontsize{64}{80}\selectfont}
+\newcommand{\parttitlefont}{\sectionalfont\fontsize{48}{60}\selectfont}
+\newcommand{\chapternumberfont}{\sectionalfont\fontsize{64}{80}\selectfont}
+\newcommand{\chaptertitlefont}{\sectionalfont\fontsize{32}{40}\selectfont}
+\newcommand{\sectiontitlefont}{\sectionalfont\fontsize{18}{22.5}\selectfont}
+\newcommand{\subsectiontitlefont}{\sectionalfont\fontsize{16}{20}\selectfont}
+\newcommand{\subsubsectiontitlefont}{\sectionalfont\fontsize{14}{17.5}\selectfont}
+\newcommand{\headertitlefont}{\sectionalfont\fontsize{12}{15}\selectfont}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Formateo de capítulos y secciones
+\usepackage{titlesec}
+\titleformat{\chapter} % command
+[display] % shape
+{} % format
+{\chapternumberfont\flushright\thechapter} % label
+{0pt} % sep
+{\chaptertitlefont\flushright} % before
+[] % after
+
+\titleformat{\section} % command
+[block] % shape
+{} % format
+{\sectiontitlefont\thesection} % label
+{1.5ex} % sep
+{\sectiontitlefont} % before
+[] % after
+
+
+\titleformat{\subsection} % command
+[block] % shape
+{} % format
+{\subsectiontitlefont\thesubsection} % label
+{1.5ex} % sep
+{\subsectiontitlefont} % before
+[] % after
+
+
+\titleformat{\subsubsection} % command
+[block] % shape
+{} % format
+{\subsubsectiontitlefont\thesubsubsection} % label
+{1.5ex} % sep
+{\subsubsectiontitlefont} % before
+[] % after
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Empieza el documento
@@ -49,7 +105,7 @@
 \cleardoublepage
 
 \pagenumbering{roman} % La numeración debe ser romana hasta el primer capítulo
-
+\pagestyle{plain}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Índice de contenidos
 \tableofcontents
@@ -66,7 +122,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Resumen en castellano
 \input{resumen}
-
 \cleardoublepage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -75,6 +130,21 @@
 \cleardoublepage
 
 \pagenumbering{arabic} % Iniciamos la numeración árabe en el primer capítulo
+\pagestyle{fancy}
+% Remembering the chapter title:
+\renewcommand{\chaptermark}[1]{\markboth{\headertitlefont\thechapter\quad#1}{}}
+% Remembering section number and title:
+\renewcommand{\sectionmark}[1]{\markright{\headertitlefont\thesection\quad#1}}
+% Clear all header fields
+\fancyhead{}
+\fancyhead[RE]{}{}
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\rightmark}
+% Clear all footer fields
+\fancyfoot{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Capítulos

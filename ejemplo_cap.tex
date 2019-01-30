@@ -2,10 +2,27 @@
 
 [Esto es un ejemplo de capítulo]
 
-Lo que sigue es un lorem ipsum como ejemplo de lo que sería un capítulo. Incluimos esta cita bibliográfica \cite{recomendaciones}
+Lo que sigue es un lorem ipsum como ejemplo de lo que sería un capítulo. Incluimos esta cita bibliográfica \cite{recomendaciones}.
 
 \lipsum
 
+
+A continuación se muestra un listado de código hecho con el paquete \emph{minted:}
+
+
+\begin{code} % Necesario comenzar con esto para poder añadir pie en el listado
+\begin{minted}{c}
+  #include <stdio.h>
+  // A simple Hello World
+  int main(){
+    printf("Hello World!\n");
+    return 0;
+  }
+\end{minted}
+\caption{Ejemplo de listado de código}
+\end{code}
+
+Esta es la cita bibliográfica de un libro \cite{ec}.
 
 %%% Local Variables: 
 %%% mode: latex
