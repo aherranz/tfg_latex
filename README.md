@@ -2,19 +2,13 @@
 
 You will need a full installation of LaTeX (eg. Ubuntu packages `texlive-full` and `biber`).
 
-## Making your references
+## Making your PDF
 
-When you want to add a new reference, before to generate pdf file you have to run `biber`, a LaTeX tool for manage your references:
-
-```shell
-~$ biber tfg_main.bcf
-```
-
-After this, you can run `pdflatex`
+See the `Makefile`.
 
 ## Code
 
-My recommendation is to use package `listings`, in fact is the package included by the style.
+Our recommendation is to use package `listings`, in fact is the package included by the style.
 
 You can use also `minted` package in order to hightlight your code. This package uses
 `Pygments`, a Python library, so you have to install Python if you don't have it.
