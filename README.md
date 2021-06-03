@@ -1,6 +1,6 @@
 # LaTeX template for "Trabajo fin de grado" at ETSIINF / UPM
 
-You will need a full installation of LaTeX (eg. Ubuntu packages `texlive-full` and `biber`).
+You will need a full installation of LaTeX (eg. Ubuntu package `texlive-full` should be enough).
 
 ## Making your PDF
 
