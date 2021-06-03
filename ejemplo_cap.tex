@@ -1,19 +1,96 @@
 \chapter{Ejemplo de capítulo}
-
 [Esto es un ejemplo de capítulo]
 
-Lo que sigue es un lorem ipsum como ejemplo de lo que sería un capítulo. Incluimos esta cita bibliográfica \cite{recomendaciones}.
+En este capítulo incluimos varias secciones y en cada una de ellas se presenta un recurso básico de LaTeX. Hay muchos más recursos.
 
-\lipsum
+\section{Tipografía}
 
-\section{Ejemplo de inclusión de código fuente}
+Puedes cambiar ciertas características del tipo de letra: \textrm{texto en ``roman font''}, \textbf{texto en negrita}, \emph{texto enfatizad}, \textit{texto en itálica}, \texttt{texto en teletype}, \textsc{Texto En Small Caps}.
+
+Por supuesto puedes combinar: \textbf{\textit{texto itálica en negrita}}
+
+\section{Capítulo, secciones subsecciones, etc.}
+
+Como ya has visto, en LaTeX jamás pones un número de referencia, simplemente declaras dónde empieza un capítuo, una sección o una subsección. Como la siguiente.
+
+\subsection{Título de una subsección}
+
+Dentro pondremos una subsubsección.
+
+\subsubsection{Título de una subsubsección}
+
+Dentro pondremos un ``párrafo'' con título:
+
+\paragraph{Título de un párrafo}
+Y el texto del párrafo sigue.
+
+\subsection{Seccions sin números}
+
+\section*{Título de sección sin número}
+
+\subsection*{Título de subsección sin número}
+
+\section{Listas de cosas}
+
+Puedes usar listas no numeradas:
+\begin{itemize}
+\item Cosa uno
+\item Cosa dos
+\item Cosa tres
+\item Cosa cuatro
+\end{itemize}
+
+O listas numeradas:
+\begin{enumerate}
+\item Cosa uno
+\item Cosa dos
+\item Cosa tres
+\item Cosa cuatro
+\end{enumerate}
+
+\section{Figuras}
+
+Puedes poner cosas dentro de una figura. Por ejemplo la
+figura~\ref{fig:escudo}. LaTeX siempre intenta colocar las figuras en
+el ``mejor'' sitio.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.33\linewidth]{portada/etsiinf}
+  \caption{El escudo de la ETSIINF}
+  \label{fig:escudo}
+\end{figure}
+
+\section{Matemáticas}
+
+LaTeX está muy preparado para escribir fórmulas matemáticas con variables como $x$ en expresiones como esta en línea: \(\int_{a}^{b} x^2 \,dx\) o en un párrafo centrado a parte:
+
+\begin{displaymath}
+  \oint_V f(s) \,ds
+\end{displaymath}
+
+\section{Espaciados verticales}
+
+Trata siempre de evitar los comando \verb|\vspace|, \verb|\newpage|, \verb|\clearpage|, \verb|\\|, etc.
+
+\section{Citas bibligráficas}
+
+Las citas bibliográficas se incluyen de esta forma: puede encontrar
+las recomendaciones para realizar el TFG en
+\cite{recomendaciones}. Para añadir nuevas citas deberás poner las
+entradas en el fichero \url{*.bib} y luego puedes referenciarla.
+
+Esta es la cita bibliográfica de un libro \cite{ec}.
+
+\section{Ejemplo de ``por hacer'' (\emph{todonotes})}
 
 Por supuesto puedes poner TODOS:\todo{como este en el margen}.
 
 \todo[inline]{O como este ``inline''}
 
-A continuación se muestra un listado de código usando el paquete listings.
+\section{Ejemplo de inclusión de código fuente}
 
+A continuación se muestra un listado de código usando el paquete listings. En él se puede ver la función \lstinline{main()} de un programa en C que hace un \emph{hello world}.
 \begin{lstlisting}[language=c]
 #include <stdio.h>
 // A simple Hello World
@@ -23,10 +100,11 @@ int main(){
 }
 \end{lstlisting}
 
+\section{Lorem Ipsum}
+Lo que sigue es un lorem ipsum como ejemplo de lo que sería una sección relativametne larga.
 
-\section{Ejemplo de cita bibliográfica}
+\lipsum
 
-Esta es la cita bibliográfica de un libro \cite{ec}.
 
 %%% Local Variables:
 %%% mode: latex
