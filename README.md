@@ -1,3 +1,5 @@
+# IMPORTANTE: esta plantilla está obsoleta por el momento te recomendamos que busques la plantilla formal en la web de la escuela (visitar https://www.fi.upm.es/?pagina=1475)
+
 # LaTeX template for "Trabajo fin de grado" at ETSIINF / UPM
 
 You will need a full installation of LaTeX (eg. Ubuntu package `texlive-full` should be enough).
