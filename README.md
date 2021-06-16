@@ -1,4 +1,6 @@
-# IMPORTANTE: esta plantilla está obsoleta por el momento te recomendamos que busques la plantilla formal en la web de la escuela (visitar https://www.fi.upm.es/?pagina=1475)
+# IMPORTANT: this template is deprecated and we recommend to find the most updated template at https://www.fi.upm.es/?pagina=1475
+
+# IMPORTANTE: esta plantilla está obsoleta y por el momento te recomendamos que busques la plantilla formal en la web de la escuela (visitar https://www.fi.upm.es/?pagina=1475)
 
 # LaTeX template for "Trabajo fin de grado" at ETSIINF / UPM
 
