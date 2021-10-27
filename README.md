@@ -1,6 +1,6 @@
-# IMPORTANT: this template is deprecated and we recommend to find the most updated template at https://www.fi.upm.es/?pagina=1475
+# IMPORTANT: this template is deprecated and we recommend to find the most updated template at school web or in my new repo https://github.com/aherranz/tfg_latex_etsiinf
 
-# IMPORTANTE: esta plantilla está obsoleta y por el momento te recomendamos que busques la plantilla formal en la web de la escuela (visitar https://www.fi.upm.es/?pagina=1475)
+# IMPORTANTE: esta plantilla está obsoleta y por el momento te recomendamos que busques la plantilla formal en la web de la escuela o en el nuevo repo https://github.com/aherranz/tfg_latex_etsiinf
 
 # LaTeX template for "Trabajo fin de grado" at ETSIINF / UPM
 
